@@ -1,0 +1,116 @@
+/* COLORS
+blue: #38c0f2;
+lightblue: #bed8e7;
+*/
+
+/*BODY STYLE*/
+body {
+    background-color: #fff;
+}
+
+/*CONTAINER STYLE*/
+.container {
+    background-color: #bed8e7;
+    border: 1px solid rgba(0, 0, 0, .2);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .2);
+    border-radius: 5px;
+    width: 30%;
+    padding: 35px;
+    position: relative;
+    margin: 35px auto;
+}
+
+/*INPUT STYLE*/
+.inpLabel {
+    font-size: 1.6em;
+}
+
+
+.inp {
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    border: none;
+    padding: 12px;
+    box-sizing: border-box;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .2);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    outline: none;
+}
+
+/*BUTTON STYLE*/
+
+
+.btnCalculate {
+    background: #38c0f2;
+    color: #fff;
+    border: none;
+    position: relative;
+    height: 60px;
+    font-size: 1.6em;
+    padding: 0 2em;
+    cursor: pointer;
+    transition: 800ms ease all;
+    outline: none;
+    margin-top: 15px;
+    width: 49%;
+}
+
+.btnCalculate:nth-child(2) {
+    float: right;
+}
+
+.btnCalculate:hover {
+    background: #fff;
+    color: #38c0f2;
+}
+
+.btnCalculate:before,
+.btnCalculate:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 2px;
+    width: 0;
+    background: #38c0f2;
+    transition: 400ms ease all;
+}
+
+.btnCalculate:after {
+    right: inherit;
+    top: inherit;
+    left: 0;
+    bottom: 0;
+}
+
+.btnCalculate:hover:before,
+.btnCalculate:hover:after {
+    width: 100%;
+    transition: 800ms ease all;
+}
+
+#table {
+    width: 100%;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .2);
+    text-align: center;
+    margin-top: 25px;
+    border: .2px solid rgba(0, 0, 0, .2);
+    display: none;
+}
+
+.salario {
+    width: 100%;
+    font-size: 18px;
+    background-color: #a8c5d6;
+    padding: 10px 0;
+    margin: 0;
+    border: none;
+    outline: none;
+    cursor: initial;
+}
+
+.salario:nth-child(even) {
+    background-color: #bed8e7;
+}

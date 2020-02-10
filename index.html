@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculadora Salário Líquido</title>
+    <!--CSS E JS-->
+    <link rel="stylesheet" href="style/style.css">
+    <script src="js/main.js" type="text/javascript"></script>
+    <script src="js/database.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+</head>
+
+<body>
+    <!--CONTAINER PRINCIPAL-->
+    <div class="container">
+        <!--INPUT DE VALOR DE SALÁRIO BRUTO DO UTILIZADOR-->
+        <lbl class="inpLabel">Salário Bruto</lbl>
+        <input type="text" class="inp" id="inpSalarioBruto" required>
+
+        <!--VALOR QUE RECEBE DO SUBSÍDIO DE REFEIÇÃO-->
+        <lbl class="inpLabel">Valor do Subsídio de Refeição</lbl>
+        <input type="text" class="inp" id="inpFood" required>
+
+        <!--INPUT DE NÚMERO DE DIAS QUE O UTILIZADOR TRABALHOU-->
+        <lbl class="inpLabel">Dias de Subsídio</lbl>
+        <input type="number" class="inp" id="inpWorkDays" min="0" max="31" value="22" required>
+
+        <!--ENQUADRAMENTO SOCIAL DO UTILIZADOR-->
+        <lbl class="inpLabel">Enquadramento Social</lbl>
+        <select class="inp" id="inpEnquadramento" required>
+            <option disabled selected>Selecione a opção</option>
+            <option>Solteiro</option>
+            <option>Casado 1 Titular</option>
+            <option>Casado 2 Titulares</option>
+            <option>Solteiro-Deficiente</option>
+            <option>Casado 1 Titular-Deficiente</option>
+            <option>Casado 2 Titulares-Deficiente</option>
+        </select>
+
+        <!--NÚMERO DE FILHOS DO UTILIZADOR-->
+        <lbl class="inpLabel">Número de Filhos</lbl>
+        <input type="number" class="inp" id="inpKids" min="0" value="0" required>
+
+        <!--MÉTODO DE RECEBIMENTO DO SUBSÍDIO DE REFEIÇÃO DESEJADO-->
+        <lbl class="inpLabel">Recebimento do Subsídio de Refeição</lbl>
+        <select class="inp" id="inpPagamento" required>
+            <option disabled selected>Selecione a opção</option>
+            <option>Sem Subsidio</option>
+            <option>Dinheiro</option>
+            <option>Vales Refeição</option>
+        </select>
+
+        <!--MÉTODO DE RECEBIMENTO DE DUODÉCIMOS-->
+        <lbl class="inpLabel">Recebimento de Duodécimos</lbl>
+        <select class="inp" id="inpDuodecimos" required>
+            <option disabled selected>Selecione a opção</option>
+            <option>Sem duodécimos</option>
+            <option>50% de um subsídio</option>
+            <option>50% dos dois subsídios</option>
+            <option>100% dos dois subsídios</option>
+        </select>
+        <!--BOTÃO CALCULAR SALÁRIO LÍQUIDO-->
+        <div class="btns">
+            <button class="btnCalculate" onclick="Calculate()">Calcular</button>
+            <button class="btnCalculate" onclick="window.location.href = './index.html'">Limpar</button>
+        </div>
+        <div id="table">
+            <input type="text" class="salario" readonly id="sb">
+            <input type="text" class="salario" readonly id="duos">
+            <input type="text" class="salario" readonly id="irs">
+            <input type="text" class="salario" readonly id="ss">
+            <input type="text" class="salario" readonly id="sr">
+            <input type="text" class="salario" readonly id="sr1">
+            <input type="text" class="salario" readonly id="srt">
+            <input type="text" class="salario" readonly id="sl">
+            <input type="text" class="salario" readonly id="sl1">
+        </div>
+    </div>
+</body>
+
+</html>

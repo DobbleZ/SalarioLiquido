@@ -1,0 +1,25 @@
+1- Verificar enquadramento social
+2- Verificar valor a utilizar de acordo com o numero de filhos
+3- Verifique o método de recebimento de subsídio de refeição
+4- Verifique se ultrapassa o máximo de acordo com o seu input
+5- Verifique os duodécimos
+6- Realizar Contas
+
+Contas:
+    -> Sem Duos- (Bruto - Dependentes) + SubRef
+    -> 50% Duos- (Bruto - Dependentes) + SubRef + Duos
+    -> 50% + 50% Duos- (Bruto - Dependentes) + SubRef + Duos
+    -> 100% Duos- (Bruto - Dependentes) + SubRef + Duos
+
+Estrutura Array:
+var Tabela1 = [
+    {
+        "nome": 123, 
+        "dep0": 0.5, 
+        "dep1": 2.5, 
+        "dep2": 4.3, 
+        "dep3": 8.6, 
+        "dep4": 11.3, 
+        "dep5": 18.2
+    }
+]
